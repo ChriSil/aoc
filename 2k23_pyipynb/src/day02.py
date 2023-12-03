@@ -33,7 +33,7 @@ def part2(line):
 
 
 if __name__ == '__main__':
-    file_path = 'input/day02.txt'
+    file_path = 'C:\\Users\\CSILLER\\code\\aoc\\2k23_pyipynb\\input\\day02.txt'
     with open(file_path, 'r', encoding="utf-8") as f:
         lines = f.readlines()
     # solve_part_1(data)

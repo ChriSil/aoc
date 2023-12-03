@@ -35,7 +35,8 @@ def solve_part_1(data):
 def solve_part_2(data):
     solution = 0
     digits = ["zero", "one", "two", "three", "four",
-              "five", "six", "seven", "eight", "nine"]  # very clever. list index equals int value of text
+              # very clever. list index equals int value of text
+              "five", "six", "seven", "eight", "nine"]
     for line in data:
         nums = []
         for i in range(len(line)):
@@ -50,11 +51,9 @@ def solve_part_2(data):
 
 
 if __name__ == '__main__':
-    file_path = 'input/day01.txt'
+    file_path = 'C:\\Users\\CSILLER\\code\\aoc\\2k23_pyipynb\\input\\day02.txt'
     with open(file_path, 'r') as f:
         data = f.readlines()
 
     print(solve_part_1(data))
     print(solve_part_2(data))
-
-    print('done')

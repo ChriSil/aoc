@@ -1,3 +1,4 @@
 # aoc
-Advent of Code challenges and solutions, as an effort to learn new languages 
+Advent of Code challenges and solutions.
 # first AoC in 2022, solved (partially with Python)
+# second AoC 2023, Py and ipynb

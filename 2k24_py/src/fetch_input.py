@@ -3,7 +3,7 @@ import requests
 
 # Configuration
 YEAR = 2024
-DAY = 1  # Change this to the day you want
+DAY = 5  # Change this to the day you want
 # Replace with your session cookie
 SESSION_COOKIE = "53616c7465645f5f12c69d3462b8e1bd70521f6ab7d69672e1a05650139b78abad9f9e7954266954676949723eca2c01ae1182973707f5df3ae15b5d4eede6c6"
 OUTPUT_DIR = "2k24_py/input"  # Directory to store inputs

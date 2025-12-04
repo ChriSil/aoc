@@ -1,0 +1,7 @@
+# aoc/Cargo.toml
+[workspace]
+members = ["aoc_2k25_rust"
+   
+    # Add new years here: if using Rust
+]
+resolver = "3"

@@ -1,2 +1,22 @@
+# All inputs from AoC
 **/input/
+
 .env
+
+# Standard Cargo build directory
+/target/
+
+# Operating System and IDE artifacts
+# Common temporary files created during development or by editors
+**/*.rs.bk
+*.swp
+*~
+*.log
+
+# Windows and macOS specific build artifacts
+# These appear in the project root but are generated during the build process
+/Cargo.lock
+
+# Editor/IDE specific files
+/.idea/
+.vscode/

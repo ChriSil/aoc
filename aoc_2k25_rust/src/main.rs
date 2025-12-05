@@ -1,20 +1,24 @@
 // src/main.rs
 mod util;
 mod day01;
-// mod day02;
+mod day02;
+mod day03;
 mod solver;
 
 use solver::DaySolver;
 use day01::Day01Solver;
+use day02::Day02Solver;
+use day03::Day03Solver;
 // use day02::Day02Solver; // Import the specific solver for Day 02
 
 fn main() {
-    let day_to_run: usize = 1;
+    let day_to_run: usize = 3;
 
     // Create a vector of boxed DaySolver trait objects
     let solvers: Vec<Box<dyn DaySolver>> = vec![
-        Box::new(Day01Solver), // Day 1 solver
-        // Box::new(Day02Solver), // Day 2 solver
+        Box::new(Day01Solver),
+        Box::new(Day02Solver),
+        Box::new(Day03Solver),
         // Add other day solvers here as they are implemented
     ];
 

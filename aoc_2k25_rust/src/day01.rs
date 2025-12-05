@@ -27,16 +27,16 @@ pub fn solve(input: &str) -> Result<(i32, i32), Box<dyn Error>> {
         let theoretical_pos:i32 = current_a+signed_distance;        
 
 // P2, count full rotations, then check if there is a positive or a negative wrap (i.e. crossing 0)
-        let mut full_rota: i32 = signed_distance.abs() / 100;
+        let full_rota: i32 = signed_distance.abs() / 100;
         cross_counter += full_rota;
 
         if signed_distance >= 0 { // Right Rotation, check for positive wrap
-            cross_counter += if signed_distance % 100 + current_a > 99 { 1 } else { 0 };
+            cross_counter += if signed_distance.rem_euclid(100) + current_a > 99 { 1 } else { 0 }; 
         }
         else { // Left Rotation, check for negative wrap
             // NOTE: signed_distance % 100 is negative here. We must subtract its absolute value.
             // Use the absolute value of the remainder to find the distance moved within the final partial cycle.
-            cross_counter += if current_a as i32 + (signed_distance % 100) < 0 { 1 } else { 0 };
+            cross_counter += if  signed_distance.rem_euclid(100) + current_a < 0 { 1 } else { 0 };
         }
 // P1. determine new position of arrow, push it onto the vector        
         current_a = (((theoretical_pos) % 100) + 100) % 100;

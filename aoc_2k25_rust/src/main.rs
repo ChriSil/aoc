@@ -13,6 +13,7 @@ use day03::Day03Solver;
 
 fn main() {
     let day_to_run: usize = 1;
+    let use_test_input: bool = false; // Set to true to use test input instead of real input
 
     // Create a vector of boxed DaySolver trait objects
     let solvers: Vec<Box<dyn DaySolver>> = vec![
@@ -28,10 +29,18 @@ fn main() {
     }
 
     let selected_solver = &solvers[day_to_run - 1]; // Adjust for 0-based indexing
-
     let day_to_run_u32: u32 = day_to_run.try_into().expect("Day number out of u32 range");
+    
+    // Determine which input to use
+    let input_result = if use_test_input {
+        // Try to get scraped test input from the problem page
+        util::input::get_test_input(day_to_run_u32)
+    } else {
+        // Get the real input
+        util::input::get_input(day_to_run_u32)
+    };
 
-    match util::input::get_input(day_to_run_u32) {
+    match input_result {
         Ok(input) => {
             println!("\n--- Raw Input Preview (Day {}) ---", day_to_run);
             for (i, line) in input.lines().enumerate() {

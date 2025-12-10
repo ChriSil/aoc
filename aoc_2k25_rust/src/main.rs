@@ -12,7 +12,7 @@ use day03::Day03Solver;
 // use day02::Day02Solver; // Import the specific solver for Day 02
 
 fn main() {
-    let day_to_run: usize = 3;
+    let day_to_run: usize = 1;
 
     // Create a vector of boxed DaySolver trait objects
     let solvers: Vec<Box<dyn DaySolver>> = vec![

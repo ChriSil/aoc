@@ -151,6 +151,8 @@ use super::solver::DaySolver;
 //     Ok((part1_target_count, part2_result))
 // }
 
+// revised solution after consulting the forum. works with counters. not as neat but works. 
+//ToDo if ever: refactor to use the vector, that would be fun.
 pub fn solve(input: &str) -> Result<(i32, i32), Box<dyn Error>> {
     let mut position: i32 = 50;
     let mut part1_count: i32 = 0;    // Part 1: times dial ENDS at 0

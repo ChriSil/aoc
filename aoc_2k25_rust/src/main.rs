@@ -13,7 +13,7 @@ use day03::Day03Solver;
 
 fn main() {
     let day_to_run: usize = 1;
-    let use_test_input: bool = false; // Set to true to use test input instead of real input
+    let use_test_input: bool = true; // Set to true to use test input instead of real input
 
     // Create a vector of boxed DaySolver trait objects
     let solvers: Vec<Box<dyn DaySolver>> = vec![
